@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.main-login {
+    /* vw se refere a Viewport Width e vh a Viewport height */
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    /* Justify content é usado para o eixo X */
+    justify-content: center;
+    /* Align-items é usado para o eixo Y */
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* Flex-direction alinha os itens dentro de uma flex, possibilitando que elementos
+    fique um embaixo do outro(Column) Mesmo quando o display for flex(que centraliza um ao lado do outro)*/
+    flex-direction: column;
+}
