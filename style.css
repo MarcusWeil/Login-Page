@@ -3,6 +3,10 @@ body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
 }
+/* Garante que todos os elementos dentro de boding tenham colisão, e não ultrapassem a div maior */
+body * {
+    box-sizing: border-box;
+}
 
 .main-div {
     /* vw se refere a Viewport Width e vh a Viewport height */
@@ -27,9 +31,13 @@ body {
     }
     
 .left-div>h1 {
-        color: #77ffc0;
+    color: #77ffc0;
+    font-size: 3vw;
     }
-    
+
+.dragon-bg {
+    width: 40vw;
+}
 .right-div {
     width: 50vw;
     height: 100vh;
@@ -110,4 +118,43 @@ body {
     background: #00ff88;
     cursor: pointer;
     color: #2b134b;
+}
+/* Enquanto a largura na tela for de até 950px, adicione os elementos: */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+/* Para celulares e telas menores, os elementos terão as seguintes estilizações:*/
+@media only screen and (max-width:600px) {
+    .main-div {
+        flex-direction: column;
+    }
+
+    .left-div {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-div>h1 {
+        display: none;
+    }
+
+    .right-div {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-login {
+        width: 85%;
+    }
+
+    .textfield>input::placeholder {
+        font-size: 10pt;
+    }
+
+    .dragon-bg {
+        width: 70vw;
+    }
 }
