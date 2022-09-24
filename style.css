@@ -13,40 +13,70 @@ body {
     /* Align-items é usado para o eixo Y */
     align-items: center;
 }
-
 .left-div {
     width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     /* Flex-direction alinha os itens dentro de uma flex, possibilitando que elementos
-    fiquem um embaixo do outro(Column) Mesmo quando o display for flex(que centraliza um ao lado do outro)*/ flex-direction: column;
+    fiquem um embaixo do outro(Column) Mesmo quando o display for flex (que centraliza um ao lado do outro)*/
     }
     
-    .left-div>h1 {
+.left-div>h1 {
         color: #77ffc0;
     }
     
-    .right-div {
-        width: 50vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.right-div {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     
-    .card-login {
-        /* Utilizando porcentagem no lugar de vw/vh pra ser relativo ao tamanho da div */
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #2f2841;
-        flex-direction: column;
-        padding: 30px 35px;
-            /* Suavizar as bordas quadradas deste card */
-            border-radius: 20px;
-            /* Sombras no Eixo X - Eixo Y - Blur - Cor da sombra */
-            box-shadow: 0px 10px 40px #00000056;
+.card-login {
+    /* Utilizando porcentagem no lugar de vw/vh pra ser relativo ao tamanho da div */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2f2841;
+    flex-direction: column;
+    padding: 30px 35px;
+    /* Suavizar as bordas quadradas deste card */
+    border-radius: 20px;
+    /* Sombras no Eixo X - Eixo Y - Blur - Cor da sombra */
+    box-shadow: 0px 10px 40px #00000056;
+}
+.card-login>h1 {
+    margin: 0;
+    color: #00ff88;
+    font-weight: 800;
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* Quando flex-direction é usado, justify content e Align items tem
+    seus eixos invertidos. 
+    Portanto, align-items modifica o eixo X ao invés do eixo Y*/
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    box-sizing: border-box;
+    /* outline é usado pra remover o efeito de "caixa" ao clicar no input */
+    /* boxsizing é usado pra limitar o conteúdo dentro de sua "caixa"(cria colisão) */
 }
