@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 body {
     margin: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .main-div {
@@ -54,13 +56,16 @@ body {
     margin: 0;
     color: #00ff88;
     font-weight: 800;
+    text-transform: uppercase;
 }
 
 .textfield {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin: 10px 0px;
     /* Quando flex-direction é usado, justify content e Align items tem
     seus eixos invertidos. 
     Portanto, align-items modifica o eixo X ao invés do eixo Y*/
@@ -73,10 +78,36 @@ body {
     border-radius: 10px;
     padding: 15px;
     background: #514869;
-    color: #f0ffffde;
     font-size: 12pt;
+    color: #f0ffffde;
     box-shadow: 0px 10px 40px #00000056;
     box-sizing: border-box;
     /* outline é usado pra remover o efeito de "caixa" ao clicar no input */
     /* boxsizing é usado pra limitar o conteúdo dentro de sua "caixa"(cria colisão) */
+}
+.textfield>label {
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #f0ffffde;
+}
+
+/* :: Após acessar o Input serve pra acessar uma propriedade deste */
+.textfield>input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 80%;
+    padding: 16px 0px;
+    margin: 25px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    background: #00ff88;
+    cursor: pointer;
+    color: #2b134b;
 }
