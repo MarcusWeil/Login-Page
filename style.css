@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-.main-login {
+.main-div {
     /* vw se refere a Viewport Width e vh a Viewport height */
     width: 100vw;
     height: 100vh;
@@ -14,12 +14,39 @@ body {
     align-items: center;
 }
 
-.left-login {
+.left-div {
     width: 50vw;
     height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
     /* Flex-direction alinha os itens dentro de uma flex, possibilitando que elementos
-    fique um embaixo do outro(Column) Mesmo quando o display for flex(que centraliza um ao lado do outro)*/
-    flex-direction: column;
+    fiquem um embaixo do outro(Column) Mesmo quando o display for flex(que centraliza um ao lado do outro)*/ flex-direction: column;
+    }
+    
+    .left-div>h1 {
+        color: #77ffc0;
+    }
+    
+    .right-div {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card-login {
+        /* Utilizando porcentagem no lugar de vw/vh pra ser relativo ao tamanho da div */
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #2f2841;
+        flex-direction: column;
+        padding: 30px 35px;
+            /* Suavizar as bordas quadradas deste card */
+            border-radius: 20px;
+            /* Sombras no Eixo X - Eixo Y - Blur - Cor da sombra */
+            box-shadow: 0px 10px 40px #00000056;
 }
